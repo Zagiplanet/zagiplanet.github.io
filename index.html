@@ -1,13 +1,168 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZAGI WORLD – Countryside Escape</title>
-  <!-- FULL HTML CONTENT STORED IN CANVAS - PREVIOUSLY EDITED VERSION -->
-  <!-- Due to size, it's stored in the canvas and downloaded below -->
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff8ef; color: #333; transition: all 0.3s ease; }
+    header { background: #6a994e; padding: 2rem; text-align: center; color: white; position: relative; }
+    nav { background: #386641; padding: 1rem; text-align: center; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    .language-switch { position: absolute; top: 1rem; right: 2rem; }
+    .language-switch select { padding: 5px; }
+    section { padding: 2rem; max-width: 1000px; margin: auto; background: white; margin-top: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { color: #386641; }
+    footer { background: #6a994e; text-align: center; padding: 1rem; color: white; margin-top: 2rem; }
+    .donate-button { display: inline-block; padding: 1rem 2rem; background: #f3722c; color: white; text-decoration: none; border-radius: 5px; margin-top: 1rem; }
+    .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .gallery img { width: 30%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .quote { font-style: italic; margin: 1rem 0; color: #555; text-align: center; }
+  </style>
+  <script>
+    const translations = {
+      en: {
+        title: "ZAGI WORLD – Countryside Escape",
+        about: "About ZAGI WORLD",
+        aboutText: "Located near the forested hills of Hrvatsko Zagorje, ZAGI WORLD is a rustic retreat filled with love for animals, nature, and family life...",
+        animals: "Our Animals",
+        animalsText: "We raise a variety of animals with care and respect: horses, goats, chickens, rabbits, alpacas, donkeys and more...",
+        activities: "Activities & Attractions",
+        food: "Food & Drinks",
+        gallery: "Gallery",
+        support: "Support ZAGI WORLD",
+        contact: "Contact",
+        donateNow: "Donate via PayPal",
+        quote: "Let the countryside teach you peace, and animals remind you of joy."
+      },
+      hr: {
+        title: "ZAGI WORLD – Seoski Raj u Zagorju",
+        about: "O ZAGI WORLDU",
+        aboutText: "Smješten uz šumovite brežuljke Hrvatskog zagorja, ZAGI WORLD je obiteljsko imanje puno ljubavi prema prirodi...",
+        animals: "Naše životinje",
+        animalsText: "Uzgajamo konje, koze, kokoši, kuniće, alpake, magarce i druge uz pažnju i brigu...",
+        activities: "Aktivnosti i sadržaji",
+        food: "Hrana i piće",
+        gallery: "Galerija",
+        support: "Podrži ZAGI WORLD",
+        contact: "Kontakt",
+        donateNow: "Doniraj putem PayPala",
+        quote: "Neka ti priroda donese mir, a životinje osmijeh."
+      },
+      de: {
+        title: "ZAGI WORLD – Landparadies in Kroatien",
+        about: "Über ZAGI WORLD",
+        aboutText: "In den Hügeln des kroatischen Zagorje gelegen, ist ZAGI WORLD ein liebevoll gestalteter Ort für Familien und Naturfreunde...",
+        animals: "Unsere Tiere",
+        animalsText: "Wir halten Pferde, Ziegen, Hühner, Kaninchen, Alpakas, Esel und mehr mit viel Herz...",
+        activities: "Aktivitäten & Angebote",
+        food: "Essen & Trinken",
+        gallery: "Galerie",
+        support: "ZAGI WORLD unterstützen",
+        contact: "Kontakt",
+        donateNow: "Jetzt via PayPal spenden",
+        quote: "Die Natur bringt Frieden, die Tiere bringen Freude."
+      }
+    };
+    function changeLanguage(lang) {
+      const t = translations[lang];
+      document.title = t.title;
+      document.getElementById('about-title').innerText = t.about;
+      document.getElementById('about-text').innerText = t.aboutText;
+      document.getElementById('animals-title').innerText = t.animals;
+      document.getElementById('animals-text').innerText = t.animalsText;
+      document.getElementById('activities-title').innerText = t.activities;
+      document.getElementById('food-title').innerText = t.food;
+      document.getElementById('gallery-title').innerText = t.gallery;
+      document.getElementById('support-title').innerText = t.support;
+      document.getElementById('contact-title').innerText = t.contact;
+      document.getElementById('donate-button').innerText = t.donateNow;
+      document.getElementById('quote').innerText = t.quote;
+    }
+  </script>
 </head>
 <body>
-  <!-- Complete HTML from canvas goes here -->
+  <header>
+    <div class="language-switch">
+      <label for="language">Language:</label>
+      <select id="language" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="hr">Hrvatski</option>
+        <option value="de">Deutsch</option>
+      </select>
+    </div>
+    <h1>ZAGI WORLD</h1>
+    <p>Illustrated family paradise in the heart of Hrvatsko Zagorje</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#animals">Animals</a>
+    <a href="#activities">Activities</a>
+    <a href="#food">Food</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#donate">Support</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2 id="about-title">About ZAGI WORLD</h2>
+    <p id="about-text">Located near the forested hills of Hrvatsko Zagorje...</p>
+  </section>
+
+  <section id="animals">
+    <h2 id="animals-title">Our Animals</h2>
+    <p id="animals-text">We raise a variety of animals with care and respect...</p>
+  </section>
+
+  <section id="activities">
+    <h2 id="activities-title">Activities & Attractions</h2>
+    <ul>
+      <li>Petting zoo & mini farm for children</li>
+      <li>Zipline and mountain sledding</li>
+      <li>Glamping & countryside stays</li>
+      <li>Workshops & seasonal events (Easter, Summer, Advent)</li>
+      <li>Educational school programs</li>
+    </ul>
+  </section>
+
+  <section id="food">
+    <h2 id="food-title">Food & Drinks</h2>
+    <p>Homemade meals, traditional flavors, and family-friendly pricing!</p>
+  </section>
+
+  <section id="gallery">
+    <h2 id="gallery-title">Gallery</h2>
+    <div class="gallery">
+      <img src="ChatGPT Image 15. Apr. 2025, 21_04_39.png" />
+      <img src="ChatGPT Image 15. Apr. 2025, 21_05_45.png" />
+      <img src="ChatGPT Image 15. Apr. 2025, 21_06_01.png" />
+      <img src="ChatGPT Image 15. Apr. 2025, 21_06_03.png" />
+      <img src="ChatGPT Image 15. Apr. 2025, 21_06_05.png" />
+      <img src="ChatGPT Image 15. Apr. 2025, 21_06_07.png" />
+      <img src="ChatGPT Image 15. Apr. 2025, 21_06_13.png" />
+      <img src="ChatGPT Image 15. Apr. 2025, 21_08_31.png" />
+      <img src="ChatGPT Image 15. Apr. 2025, 21_08_34.png" />
+      <img src="ChatGPT Image 15. Apr. 2025, 21_08_36.png" />
+    </div>
+    <p id="quote" class="quote">Let the countryside teach you peace, and animals remind you of joy.</p>
+  </section>
+
+  <section id="donate">
+    <h2 id="support-title">Support ZAGI WORLD</h2>
+    <p>If you believe in our mission, support us through donations.</p>
+    <a id="donate-button" class="donate-button" href="https://www.paypal.com/donate/?business=zagiplanet@gmail.com" target="_blank">Donate via PayPal</a>
+  </section>
+
+  <section id="contact">
+    <h2 id="contact-title">Contact</h2>
+    <p>Email: info@zagiworld.com</p>
+    <p>Facebook: <a href="https://facebook.com/zagiworld" target="_blank">@zagiworld</a></p>
+    <p>Instagram: <a href="https://instagram.com/zagiworld" target="_blank">@zagiworld</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ZAGI WORLD – All rights reserved</p>
+  </footer>
 </body>
 </html>
