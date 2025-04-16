@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +20,13 @@
       font-size: 2rem;
       font-weight: bold;
       border-bottom: 5px solid #33691e;
+    }
+    .intro {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-size: 1.1rem;
+      color: #444;
     }
     .gallery {
       display: flex;
@@ -48,10 +56,26 @@
     .donate-button:hover {
       background-color: #e0ac00;
     }
+    .watermark {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 1rem;
+      color: rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
   <header>ZAGI PLANET</header>
+
+  <div class="intro">
+    <p>Welcome to ZAGI PLANET – a place born from a dream.</p>
+    <p>After 10 years living abroad, I am returning home to build a magical countryside retreat where animals roam freely and families reconnect with nature – and each other.</p>
+    <p>Here, among happy horses, alpacas, goats, bunnies, turtles, chickens and donkeys, you'll find something rare: peace, laughter, and memories that don’t need to be posted online to be real.</p>
+    <p>Because the best thing about ZAGI PLANET is... families will forget their phones.</p>
+  </div>
 
   <section class="donate-section">
     <p>Support our mission and help us build ZAGI PLANET!</p>
@@ -63,24 +87,27 @@
   </section>
 
   <section class="gallery">
-<img src="images/img1.png" alt="Gallery Image 1" />
-<img src="images/img2.png" alt="Gallery Image 2" />
-<img src="images/img3.png" alt="Gallery Image 3" />
-<img src="images/img4.png" alt="Gallery Image 4" />
-<img src="images/img5.png" alt="Gallery Image 5" />
-<img src="images/img6.png" alt="Gallery Image 6" />
-<img src="images/img7.png" alt="Gallery Image 7" />
-<img src="images/img8.png" alt="Gallery Image 8" />
-<img src="images/img9.png" alt="Gallery Image 9" />
-<img src="images/img10.png" alt="Gallery Image 10" />
-<img src="images/img11.png" alt="Gallery Image 11" />
-<img src="images/img12.png" alt="Gallery Image 12" />
-<img src="images/img13.png" alt="Gallery Image 13" />
-<img src="images/img14.png" alt="Gallery Image 14" />
-<img src="images/img15.png" alt="Gallery Image 15" />
-<img src="images/img16.png" alt="Gallery Image 16" />
-<img src="images/img17.png" alt="Gallery Image 17" />
-<img src="images/img18.png" alt="Gallery Image 18" />
-<img src="images/img19.png" alt="Gallery Image 19" />  </section>
+    <img src="images/img1.png" alt="Gallery Image 1" />
+    <img src="images/img2.png" alt="Gallery Image 2" />
+    <img src="images/img3.png" alt="Gallery Image 3" />
+    <img src="images/img4.png" alt="Gallery Image 4" />
+    <img src="images/img5.png" alt="Gallery Image 5" />
+    <img src="images/img6.png" alt="Gallery Image 6" />
+    <img src="images/img7.png" alt="Gallery Image 7" />
+    <img src="images/img8.png" alt="Gallery Image 8" />
+    <img src="images/img9.png" alt="Gallery Image 9" />
+    <img src="images/img10.png" alt="Gallery Image 10" />
+    <img src="images/img11.png" alt="Gallery Image 11" />
+    <img src="images/img12.png" alt="Gallery Image 12" />
+    <img src="images/img13.png" alt="Gallery Image 13" />
+    <img src="images/img14.png" alt="Gallery Image 14" />
+    <img src="images/img15.png" alt="Gallery Image 15" />
+    <img src="images/img16.png" alt="Gallery Image 16" />
+    <img src="images/img17.png" alt="Gallery Image 17" />
+    <img src="images/img18.png" alt="Gallery Image 18" />
+    <img src="images/img19.png" alt="Gallery Image 19" />
+  </section>
+
+  <div class="watermark">ZAGI PLANET</div>
 </body>
 </html>
